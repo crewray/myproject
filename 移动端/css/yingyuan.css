@@ -1,0 +1,22 @@
+.header p {
+  height: 50px;
+  font-size: 16px;
+}
+.header p .icon-sousuo {
+  font-size: 22px;
+}
+.header p:first-child {
+  border-bottom: 1px solid #ebebeb;
+}
+.icon-jiantou9 {
+  font-size: 12px;
+}
+.list .item {
+  height: 70px;
+}
+.f-999 {
+  color: #999;
+}
+.ff88229 {
+  color: #ff8229;
+}

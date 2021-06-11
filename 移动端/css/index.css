@@ -1,0 +1,48 @@
+body {
+  padding-bottom: 50px;
+}
+.header .circle-box {
+  width: 50px;
+  left: 50%;
+  margin-left: -25px;
+  bottom: 0;
+  padding-bottom: 8px;
+}
+.header .circle-box .circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.header .circle-box .circle.on {
+  background-color: #1989fa;
+}
+.header .location {
+  width: 50px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 20px;
+  left: 5px;
+  top: 20px;
+  font-size: 14px;
+}
+.header .location .iconfont {
+  font-size: 12px;
+}
+.list .item {
+  border-bottom: 1px solid #f4f4f4;
+}
+.list .item .img {
+  width: 65px;
+  height: 90px;
+}
+.list .item .t-box {
+  margin-left: 11px;
+}
+.list .item .buy {
+  border: 1px solid #ff5f16;
+  width: 50px;
+  height: 25px;
+  color: #ff5f16;
+  font-size: 12px;
+}
