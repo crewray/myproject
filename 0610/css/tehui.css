@@ -1,14 +1,16 @@
-.list .item {
-  height: 320px;
-}
 .list .item .img {
   width: 100%;
-  height: 200px;
 }
-.list .item .avatar {
+.list .item .box {
+  width: 160px;
+}
+.list .item .avatar img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+.list .item .avatar img:last-child {
+  left: 20px;
 }
 .list .item .btn {
   background-color: #c03131;

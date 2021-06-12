@@ -1,6 +1,10 @@
 .header {
   height: 45px;
 }
+.header span:last-child {
+  width: 16px;
+  height: 16px;
+}
 .list .item {
   height: 50px;
   border-bottom: 1px solid #ebebeb;
