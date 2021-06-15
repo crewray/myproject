@@ -10,6 +10,7 @@ body {
 }
 .form input {
   border: 0;
+  outline: none;
 }
 .form div {
   border-bottom: 1px solid #ebebeb;
