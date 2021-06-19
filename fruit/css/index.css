@@ -1,0 +1,30 @@
+.slides img {
+  width: 100%;
+}
+.slides .dots {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+}
+.slides .dots div {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+}
+.slides .dots .on {
+  background-color: #1289fe;
+}
+.type {
+  flex-wrap: wrap;
+}
+.type .box {
+  width: 25%;
+  height: 95px;
+}
+.type .box img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
