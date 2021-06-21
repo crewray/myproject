@@ -10,11 +10,12 @@ input {
   line-height: 1;
   margin-top: 50px;
   caret-color: #00b1ff;
+  padding-right: 15px;
 }
 .buttons {
   height: 400px;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
   font-size: 25px;
 }
