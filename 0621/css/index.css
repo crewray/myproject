@@ -25,6 +25,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .buttons .col .equal {
   height: 156.25px;

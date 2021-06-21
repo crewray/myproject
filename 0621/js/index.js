@@ -2,12 +2,12 @@ str = ''
 
 function getValue() {
     var value = this.innerText
-    if(value==='÷'){
-        value='/'
-    }
-    if(value==='x'){
-        value='*'
-    }
+    // if(value==='÷'){
+    //     value='/'
+    // }
+    // if(value==='x'){
+    //     value='*'
+    // }
     str += value
     input=document.getElementById('input')
     input.value=str
@@ -26,6 +26,8 @@ function del(){
 }
 
 function equal(){
+    str=str.replace('x','*')
+    str=str.replace('÷','/')
     str=String(eval(str))
     input.value=str
 
