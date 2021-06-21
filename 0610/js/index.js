@@ -167,7 +167,30 @@ var list = [{
     }
 ]
 
-str = ''
+// str = ''
+
+// for (var i in list) {
+//     var item = list[i]
+//     if(!item.grade){
+//         item.grade='无'
+//     }
+//     str += `<a href="./detail.html" class="item pt-25 pb-10 flex jc-sb">
+//     <img src=${item.poster} alt="" class="img ml-10">
+//     <div class="t-box flex fg1 fdc jc-sa desc">
+//         <p class="text  f18">${item.name}</p>
+//         <p class="text f14 f999">观众评分 ${item.grade}</p>
+//         <p class="text f14 f999 actors">主演：${item.actorStr}</p>
+//         <p class="text f14 f999">${item.nation} | ${item.runtime}分钟</p>
+//     </div>
+//     <span class="buy flex jc-c aic mr-10">购票</span>
+
+//     </a>`
+// }
+
+// document.getElementById('movies').innerHTML=str
+
+function genList(){
+    str = ''
 
 for (var i in list) {
     var item = list[i]
@@ -188,3 +211,5 @@ for (var i in list) {
 }
 
 document.getElementById('movies').innerHTML=str
+}
+genList();

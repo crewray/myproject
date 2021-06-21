@@ -11,18 +11,28 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/self-common.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_2583496_39lv5h2g00a.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 
 <body>
     <div class="header rel">
         <span class="location abs f16 fff flex jc-c aic">城市<i class="iconfont icon-jiantou9"></i></span>
-        <img src="./images/poster.png" class="width100" alt="">
+        <!-- <img src="./images/poster.png" class="width100" alt="">
         <p class="circle-box abs flex jc-c">
             <i class="circle"></i>
             <i class="circle ml-10 on"></i>
             <i class="circle ml-10"></i>
-        </p>
+        </p> -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://static.maizuo.com/v5/upload/2fd9cd71b8b73608d28d38435f45ed48.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://static.maizuo.com/v5/upload/b43a16925b3c56107bec4b866a2623ca.jpg" /></div>
+                <div class="swiper-slide"><img src="./images/poster.png" /></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
 
     </div>
     <div id="movies" class="list bg-fff">
@@ -61,6 +71,17 @@
         </a>
 
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        })
+    </script>
     <script src="./js/index.js">
 
     </script>

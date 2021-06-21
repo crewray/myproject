@@ -30,7 +30,7 @@
 .container .menu {
   flex-grow: 1;
   overflow-y: auto;
-  min-width: 125px;
+  width: 0;
 }
 .container .menu .title {
   display: block;
@@ -51,6 +51,7 @@
   background-color: #fff;
   min-height: 100vh;
   overflow-y: auto;
+  width: 0;
 }
 .container .content .list {
   flex-wrap: wrap;

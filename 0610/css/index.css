@@ -29,6 +29,10 @@ body {
 .header .location .iconfont {
   font-size: 12px;
 }
+.header img {
+  width: 100%;
+  height: 210px;
+}
 .list .item {
   border-bottom: 1px solid #f4f4f4;
 }
