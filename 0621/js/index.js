@@ -18,7 +18,8 @@ function del() {
     input.value = str
 }
 
-function equal() {
+
+function equals() {
     str = str.replaceAll('x', '*')
     str = str.replaceAll('÷', '/')
     try {
@@ -45,7 +46,7 @@ for (var i of btns) {
         i.addEventListener("click", del)
         continue
     } else {
-        i.addEventListener("click", equal)
+        i.addEventListener("click", equals)
     }
 
 }
