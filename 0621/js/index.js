@@ -1,10 +1,16 @@
-str = ''
+var str = ''
+var input = document.getElementById('input')
 
 function show() {
     var value = this.innerText
     str += value
-    input = document.getElementById('input')
     input.value = str
+    if(str.length<10){
+        input.style.fontSize=65+'px'
+    }
+    else{
+        input.style.fontSize=35+'px'
+    }
 
 }
 
@@ -50,3 +56,4 @@ for (var i of btns) {
     }
 
 }
+

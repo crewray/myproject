@@ -1,4 +1,4 @@
-input{
+input {
     display: block;
     width: 100%;
     height: 65px;
@@ -11,16 +11,18 @@ input{
     margin-top: 50px;
     caret-color: #00b1ff;
     padding-right: 15px;
-    
+
 }
-.buttons{
+
+.buttons {
     height: 400px;
     position: absolute;
     bottom: 10px;
     width: 100%;
     font-size: 25px;
-    .col{
-        .btn{
+
+    .col {
+        .btn {
             width: 75px;
             height: 75px;
             // background-color: #00b1ff;
@@ -29,23 +31,37 @@ input{
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            -moz-user-select: none;
+            /*火狐*/
+            -webkit-user-select: none;
+            /*webkit浏览器*/
+            -ms-user-select: none;
+            /*IE10*/
+            -khtml-user-select: none;
+            /*早期浏览器*/
+            user-select: none;
         }
-        .equal{
+
+        .equal {
             height: 156.25px;
             background-color: #00b1ff;
             color: white;
         }
     }
-    .f2f2f2{
+
+    .f2f2f2 {
         background-color: #f2f2f2;
     }
-    .blue{
+
+    .blue {
         color: #00b1ff;
     }
-    .bg-blue{
+
+    .bg-blue {
         background-color: #e5f8ff;
     }
 }
-body{
+
+body {
     background-color: #fff;
 }
