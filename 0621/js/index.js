@@ -2,7 +2,8 @@ var str = ''
 var input = document.getElementById('input')
 
 function show() {
-    var value = this.innerText
+    
+    var value = event.target.innerText
     str += value
     input.value = str
     if(str.length<10){
@@ -38,22 +39,42 @@ function equals() {
 
 }
 
-var btns = document.getElementsByClassName('btn')
+var btns=document.getElementById('buttons')
+btns.addEventListener('click',click)
 
-for (var i of btns) {
-    var txt = i.innerText
-    if (txt !== 'C' && txt !== '删除' && txt !== '=') {
-        i.addEventListener("click", show)
-        continue
-    } else if (txt === 'C') {
-        i.addEventListener("click", free)
-        continue
-    } else if (txt === '删除') {
-        i.addEventListener("click", del)
-        continue
-    } else {
-        i.addEventListener("click", equals)
+
+// for (var i of btns) {
+//     var txt = i.innerText
+//     if (txt !== 'C' && txt !== '删除' && txt !== '=') {
+//         i.addEventListener("click", show)
+//         continue
+//     } else if (txt === 'C') {
+//         i.addEventListener("click", free)
+//         continue
+//     } else if (txt === '删除') {
+//         i.addEventListener("click", del)
+//         continue
+//     } else {
+//         i.addEventListener("click", equals)
+//     }
+
+// }
+
+
+function click(){
+    var id=event.target.id
+    if(id==='clean'){
+        free();
+        return
     }
-
+    if(id==='del'){
+        del();
+        return
+    }
+    if(id==='equals'){
+        equals();
+        return
+    }
+    show();
 }
 
