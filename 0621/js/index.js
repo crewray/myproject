@@ -63,6 +63,8 @@ btns.addEventListener('click',click)
 
 function click(){
     var id=event.target.id
+    var className=event.target.className
+    if(className.indexOf('btn')===-1) return
     if(id==='clean'){
         free();
         return
