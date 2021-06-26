@@ -46,3 +46,47 @@ p {
   padding: 10px 16px;
   border-bottom: 1px solid #f4f4f4;
 }
+.title-wrap {
+  height: 46px;
+  font-size: 12px;
+}
+.title-wrap .title::before {
+  position: absolute;
+}
+.img-wrap img {
+  width: 100%;
+}
+.img-wrap .title {
+  height: 46px;
+}
+.context {
+  padding: 15px;
+}
+.context .message {
+  height: 24px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #797d82;
+}
+.foot {
+  width: 100%;
+  background-color: #fff;
+  bottom: 0;
+  height: 50px;
+}
+.foot .box {
+  width: 50px;
+}
+.foot .iconfont {
+  font-size: 24px;
+}
+.foot .icon-heart-o-copy {
+  font-weight: bold;
+}
+.foot p {
+  padding-top: 5px;
+  font-size: 12px;
+  color: #797d82;
+}
