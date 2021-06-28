@@ -227,7 +227,7 @@ var home = {
             if (!item.grade) {
                 item.grade = '无'
             }
-            str += `<a href="./detail.html" class="item pt-25 pb-10 flex jc-sb">
+            str += `<a href="./detail.html?filmId=${item.filmId}" class="item pt-25 pb-10 flex jc-sb">
                     <img src=${item.poster} alt="" class="img ml-10">
                     <div class="t-box flex fg1 fdc jc-sa desc">
                         <p class="text  f18">${item.name}</p>

@@ -59,6 +59,9 @@
   width: 85px;
   height: 85px;
 }
+.actors .list:last-child {
+  margin-right: 15px;
+}
 .actors .list p {
   text-align: center;
 }
