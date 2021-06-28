@@ -24,7 +24,8 @@ var ajax = {
         xhr.send(data)
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                callback(xhr.responseText)
+                var result = JSON.parse(xhr.responseText);
+                callback(result)
             }
         }
     }
