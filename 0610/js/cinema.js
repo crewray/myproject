@@ -1,7 +1,8 @@
 var cinemaList={
     cinemas: '',
     render(data){
-        cinemas=data.cinemas
+        console.log(data.cinemas)
+        if(data.code==='666') cinemaList.cinemas=data.cinemas
         var list=document.querySelector('.list')
         var str=''
         data.cinemas.forEach(function(item){
@@ -32,6 +33,7 @@ var cinemaList={
 
     active(){
         var target=event.target
+        if(target.className.includes('area')) return
         var parent=event.target.parentNode
         var active=document.querySelector('.area .active')
 
@@ -50,11 +52,21 @@ var cinemaList={
 
         var currentTarget=parent.className.includes('item')?target:target.childNode
 
+        if(currentTarget.innerText==='全部'){
+            cinemaList.render(cinemaList)
+            return
+        }
+
         var list=cinemaList.cinemas.filter(function(item){
-            item.areaName==currentTarget.innerText
+            
+            return item.areaName===currentTarget.innerText
         })
 
-        cinemaList.render(list)
+        var obj={
+            cinemas: list
+        }
+
+        cinemaList.render(obj)
         
 
     }
