@@ -1,6 +1,10 @@
 var filmDetial = {
-    url: 'http://huruqing.cn:3000/api/film/getDetail?filmId=5c934f5aba39c80073aa415d',
+    url: '',
     render(data) {
+        if(data.code!='666'){
+            alert('获取数据失败!')
+            history.back()
+        }
         var film = data.film
         document.querySelector('.header img').src = film.poster
 
