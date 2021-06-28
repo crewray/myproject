@@ -1,5 +1,7 @@
 var cinemaList={
+    cinemas: '',
     render(data){
+        cinemas=data.cinemas
         var list=document.querySelector('.list')
         var str=''
         data.cinemas.forEach(function(item){
@@ -10,6 +12,53 @@ var cinemaList={
                 </div>`
         })
         list.innerHTML=str
+    },
+    drop(){
+        var area=document.querySelector('.area')
+        var pop=document.querySelector('.pop')
+        
+        if(area.className.includes('dsn')){
+            area.className=area.className.replace(' dsn','')
+            pop.style.display='block'
+        }
+        else{
+            area.className+=' dsn'
+            pop.style.display='none'
+
+        }
+        
+        
+    },
+
+    active(){
+        var target=event.target
+        var parent=event.target.parentNode
+        var active=document.querySelector('.area .active')
+
+        if(active) active.className=active.className.replace('active','')
+
+        if(target.className.includes('item')){
+            target.className+=' active'
+        }
+        if(parent.className.includes('item')){
+            parent.className+=' active'
+        }
+
+
+
+        document.querySelector('#drop').click()
+
+        var currentTarget=parent.className.includes('item')?target:target.childNode
+
+        var list=cinemaList.cinemas.filter(function(item){
+            item.areaName==currentTarget.innerText
+        })
+
+        cinemaList.render(list)
+        
+
     }
 }
 ajax.get('http://huruqing.cn:3000/api/cinema/getList',cinemaList.render)
+document.querySelector('#drop').addEventListener('click',cinemaList.drop)
+document.querySelector('.area').addEventListener('click',cinemaList.active)
