@@ -88,15 +88,18 @@
 
         function get_date() {
             var date = new Date()
-            console.log(date.getMonth())
-
-            var month = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()
-            var dateNow = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
-            var hour = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
-            var min = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
-            var second = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+            var month=Number(date.getMonth())+1
+            var dateNow=date.getDate()
+            var hour=date.getHours()
+            var min=date.getMinutes()
+            var second=date.getSeconds()            
+            month = month < 10 ? '0' + month : month
+            dateNow = dateNow < 10 ? '0' + dateNow : dateNow
+            hour = hour < 10 ? '0' + hour : hour
+            min = min < 10 ? '0' + min : min
+            second = second < 10 ? '0' + second : second
             $time.innerHTML =
-            `${date.getFullYear()}年${Number(month)+1}月${dateNow}日 ${hour}:${min}:${second}`
+            `${date.getFullYear()}年${month}月${dateNow}日 ${hour}:${min}:${second}`
         }
 
         get_date()
