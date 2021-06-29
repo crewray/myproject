@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Document</title>
 </head>
 <style>
-    .box{
+    .box {
         width: 0;
         height: 0;
         border: 50px solid transparent;
@@ -17,12 +18,29 @@
         border-right: 50px solid gold;
     }
 </style>
+
 <body>
-    <div class="box">
+    <div class="box" onclick="index.render()">
 
     </div>
     <script>
-        
+        function Index(name) {
+            this.name = name
+            var that = this
+            this.render = function () {
+                console.log(that.name)
+            }
+        }
+
+        function test(f) {
+            f()
+        }
+        var index = new Index('lei')
+        var index2 = new Index('wo')
+        test(index.render)
+        test(index2.render)
+        index.render()
     </script>
 </body>
+
 </html>

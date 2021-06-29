@@ -1,7 +1,7 @@
 var cinemaList={
     cinemas: '',
     render(data){
-        console.log(data.cinemas)
+        // console.log(data.cinemas)
         if(data.code==='666') cinemaList.cinemas=data.cinemas
         var list=document.querySelector('.list')
         var str=''

@@ -13,10 +13,12 @@
 }
 .header .area {
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .header .area li {
   width: 25%;
   height: 30px;
+  cursor: pointer;
 }
 .header .area span {
   font-size: 12px;
