@@ -11,9 +11,11 @@
 .header p .icon-sousuo {
   font-size: 22px;
 }
+.header span {
+  cursor: pointer;
+}
 .header .area {
   flex-wrap: wrap;
-  cursor: pointer;
 }
 .header .area li {
   width: 25%;
